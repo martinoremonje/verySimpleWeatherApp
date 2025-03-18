@@ -4,13 +4,11 @@ import { Weather } from "./types/weather";
 import WeatherCard from "./components/WeatherCard";
 import PreviousWeatherCard from "./components/PreviousWeatherCard";
 
-
-
 // Función para manejar estado y datos previos
 const fetchAPIuseActionState = async (
-  previousState: { data: Weather } | null, // Ajuste para reflejar `previousState.data`
+  previousState: { data: Weather } | null, // Reflect `previousState.data`
   formData: FormData
-): Promise<{ data: Weather; previousState: { data: Weather } | null } | string> => {
+): Promise<{ data: Weather; previousState: { data: Weather } | null }> => {
   console.log({ previousState, formData });
 
   try {
@@ -29,16 +27,16 @@ const fetchAPIuseActionState = async (
       previousState, // Mantiene el estado previo
     };
   } catch (error) {
-    console.log(error);
-    return "Error fetching api";
+    console.error(error);
+    // Lanza el error en lugar de devolver un string
+    throw new Error("Error fetching API");
   }
 };
 
 // Componente principal
 const App = () => {
-
   const [state, formAction] = useActionState<
-    { data: Weather; previousState: { data: Weather } | null },
+    { data: Weather | null; previousState: { data: Weather } | null },
     FormData
   >(fetchAPIuseActionState, { previousState: null, data: null });
 
@@ -47,12 +45,11 @@ const App = () => {
       <h1>React Version {version}</h1>
       <form action={formAction}>
         <div className="space-x-5">
-          <input type="text" name="city" placeholder="insert city name" />
+          <input type="text" name="city" placeholder="Insert city name" />
           <button
             type="submit"
             className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
           >
-            {/* {isPending ? "loading..." : "Found Weather"} */}
             Get Weather
           </button>
         </div>
@@ -66,7 +63,7 @@ const App = () => {
             <PreviousWeatherCard weather={state.previousState.data} />
           </>
         ) : (
-          <p>Looking for some Climates?</p>
+          <p>No previous data available</p>
         )}
       </div>
     </div>
