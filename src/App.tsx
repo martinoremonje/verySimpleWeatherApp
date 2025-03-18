@@ -6,13 +6,13 @@ import PreviousWeatherCard from "./components/PreviousWeatherCard";
 
 // Función para manejar estado y datos previos
 const fetchAPIuseActionState = async (
-  previousState: { data: Weather } | null, // Reflect `previousState.data`
+  previousState: { data: Weather } | null, // Ajuste para reflejar `previousState.data`
   formData: FormData
 ): Promise<{ data: Weather; previousState: { data: Weather } | null }> => {
   console.log({ previousState, formData });
 
   try {
-    const BASE_URL = "http://api.weatherapi.com/v1/current.json";
+    const BASE_URL = "https://api.weatherapi.com/v1/current.json";
     const API = import.meta.env.VITE_API_KEY;
     const city = formData.get("city") as string;
 
@@ -28,15 +28,14 @@ const fetchAPIuseActionState = async (
     };
   } catch (error) {
     console.error(error);
-    // Lanza el error en lugar de devolver un string
-    throw new Error("Error fetching API");
+    throw new Error(error)
   }
 };
 
 // Componente principal
 const App = () => {
   const [state, formAction] = useActionState<
-    { data: Weather | null; previousState: { data: Weather } | null },
+    { data: Weather; previousState: { data: Weather } | null },
     FormData
   >(fetchAPIuseActionState, { previousState: null, data: null });
 
@@ -63,7 +62,7 @@ const App = () => {
             <PreviousWeatherCard weather={state.previousState.data} />
           </>
         ) : (
-          <p>No previous data available</p>
+          <p>Looking for some Climates?</p>
         )}
       </div>
     </div>
