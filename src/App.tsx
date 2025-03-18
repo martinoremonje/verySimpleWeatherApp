@@ -53,9 +53,12 @@ const App = () => {
   const [city, setCity] = useState<string>(""); // Estado para almacenar la ciudad
 
   const [state, formAction] = useActionState<
-    { data: Weather; previousState: Weather | null },
-    FormData
-  >(fetchAPIuseActionState, { previousState: null, data: null as unknown as Weather }); // Estado inicial tipado
+  { data: Weather; previousState: Weather },
+  FormData
+>(fetchAPIuseActionState, {
+  previousState: { location: {}, current: {} } as Weather, // Estado inicial ficticio para satisfacer los tipos
+  data: { location: {}, current: {} } as Weather,
+});
 
   return (
     <div className="container mx-auto py-2">
@@ -66,7 +69,6 @@ const App = () => {
             type="text"
             name="city"
             placeholder="Insert city name"
-            onChange={(e) => setCity(e.target.value)}
           />
           <button
             type="submit"
@@ -77,7 +79,7 @@ const App = () => {
         </div>
       </form>
       <div className="space-y-4">
-        {state.data && <WeatherCard weather={state.data} />}
+        {state?.data && <WeatherCard weather={state.data} />}
         {state?.previousState?.data ? (
           <>
             <h2>Previous:</h2>
