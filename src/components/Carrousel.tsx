@@ -31,8 +31,11 @@ const Carousel = ({ images }) => {
     };
   }, []);
 
+  // Calcular la altura del carrusel
+  const carouselHeight = `calc(100vh - 7rem)`; // 7rem es equivalente a h-28 (4 * 7 = 28 / 4 = 7 rem)
+
   return (
-    <div id="default-carousel" className="relative w-full h-screen" data-carousel="slide">
+    <div id="default-carousel" className="relative w-full" style={{ height: carouselHeight }}>
       <div className="absolute top-4 right-4 ml-6 z-50">
         <img data-aos="fade-up" data-aos-duration="2000" src={logo} alt="logo" className="rounded-full w-16 h-16" />
       </div>
@@ -55,7 +58,7 @@ const Carousel = ({ images }) => {
           className={`absolute right-0 mt-[2px] w-48 rounded-md shadow-lg py-1 transition-all duration-300 ease-in-out ${
             isDropdownOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
           }`}
-          style={{pointerEvents: isDropdownOpen ? 'auto' : 'none'}}
+          style={{ pointerEvents: isDropdownOpen ? 'auto' : 'none' }}
         >
           <div className="flex flex-col items-end">
             <a href="/contacto" className="block px-4 py-2 text-sm text-white hover:bg-gray-800/20 hover:text-gray-600">
