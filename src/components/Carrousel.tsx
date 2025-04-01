@@ -34,7 +34,7 @@ const Carousel = ({ images }) => {
   return (
     <div id="default-carousel" className="relative w-full h-screen" data-carousel="slide">
       <div className="absolute top-4 right-4 ml-6 z-50">
-  <img src={logo} alt="logo" className="rounded-full w-16 h-16" />
+  <img data-aos="fade-up"  data-aos-duration="2000" src={logo} alt="logo" className="rounded-full w-16 h-16" />
 </div>
       <div className="absolute top-4 right-0 mr-2 z-50" ref={dropdownRef}>
         <button
