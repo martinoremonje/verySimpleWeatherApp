@@ -66,14 +66,9 @@ const Carousel = ({ images }) => {
         >
           <div className="flex flex-col items-end">
             <Link to="/contacto#contacto" className="block px-4 py-2 text-sm text-white hover:bg-gray-800/20 hover:text-gray-600">
-              Contacto
+              Más Información
             </Link>
-            <Link to="/contacto#about-us" className="block px-4 py-2 text-sm text-white hover:bg-gray-800/20 hover:text-gray-600">
-              About Us
-            </Link>
-            <Link to="/contacto#referencias" className="block px-4 py-2 text-sm text-white hover:bg-gray-800/20 hover:text-gray-600">
-              Referencias
-            </Link>
+           
           </div>
         </div>
       </div>
