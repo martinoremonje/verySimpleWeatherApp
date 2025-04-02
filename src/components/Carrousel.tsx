@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import logo from '../assets/vigestaLogo.png';
 import { Link } from 'react-router-dom'; // Importa Link
+import { FaWhatsapp } from 'react-icons/fa'; // Importa el icono de WhatsApp
 
 const Carousel = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -34,6 +35,9 @@ const Carousel = ({ images }) => {
 
   // Calcular la altura del carrusel
   const carouselHeight = `calc(100vh - 7rem)`; // 7rem es equivalente a h-28 (4 * 7 = 28 / 4 = 7 rem)
+
+  // Enlace de WhatsApp
+  const whatsappLink = 'https://wa.me/56944011200';
 
   return (
     <div data-aos="fade-up" id="default-carousel" className="relative w-full" style={{ height: carouselHeight }}>
@@ -106,6 +110,16 @@ const Carousel = ({ images }) => {
         className="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
         onClick={nextSlide}
       ></button>
+
+      {/* Botón de WhatsApp */}
+      <a
+        href="https://wa.me/56944011200"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-700 text-white rounded-full w-14 h-14 flex items-center justify-center z-50 shadow-lg"
+      >
+        <FaWhatsapp className="w-8 h-8" />
+      </a>
     </div>
   );
 };
