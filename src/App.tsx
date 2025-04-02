@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Carousel from "./components/Carrousel";
 import imagen1 from './assets/construction.png';
-import imagen2 from './assets/icono-juan.jpg';
+import imagen2 from './assets/leyusodeaguavigesta.png';
 import imagen3 from './assets/running.png';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
