@@ -113,7 +113,7 @@ const Carousel = ({ images }) => {
       {/* Botón de WhatsApp */}
       <a
        data-aos="fade-up" data-aos-duration="2000" 
-        href="https://wa.me/56944011200"
+        href="https://wa.me/56984146344"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-700 text-white rounded-full w-14 h-14 flex items-center justify-center z-50 shadow-lg"

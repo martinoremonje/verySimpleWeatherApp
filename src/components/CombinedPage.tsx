@@ -8,7 +8,7 @@ import { FaWhatsapp } from 'react-icons/fa'; // Importa el icono de WhatsApp
 const CombinedPage = () => {
   return (
     <div
-    data-aos="fade-up"
+    data-aos="fade-up" data-aos-duration="2000" 
       className="container mx-auto py-8 flex justify-end animate-fade-in-delayed"
     >
         
