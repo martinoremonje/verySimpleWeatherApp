@@ -8,7 +8,7 @@ const Footer = () => {
         <div  className="text-center md:text-left mb-4 md:mb-0">
           <p>&copy; {new Date().getFullYear()} Vigesta. Todos los derechos reservados.</p>
           <hr />
-          <p>Contacto: +56 9235758</p>
+          <p>Contacto: +56 984146344</p>
           <p>Email: vigesta@vigesta.cl</p>
         </div>
         
