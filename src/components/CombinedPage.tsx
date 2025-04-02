@@ -1,19 +1,25 @@
 import React from 'react';
 import logo from '../assets/vigestaLogo.ico';
-import { Link } from 'react-router-dom'; // Importa Link
+import { Link } from 'react-router-dom'; 
 
-import { FaWhatsapp } from 'react-icons/fa'; // Importa el icono de WhatsApp
+import { FaWhatsapp } from 'react-icons/fa'; 
 
+import backgroundImg from '../assets/backgroundcombine.jpg'
 
 const CombinedPage = () => {
   return (
     <div
     data-aos="fade-up" data-aos-duration="2000" 
+   
       className="container mx-auto py-8 flex justify-end animate-fade-in-delayed"
     >
         
    
-    <div className="min-h-screen bg-gray-100">
+    <div  style={{
+      backgroundImage: `url(${backgroundImg})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+    }} className="min-h-screen bg-gray-100">
       {/* Navbar Simple */}
       <nav className="bg-white shadow">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
