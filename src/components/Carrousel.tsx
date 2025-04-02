@@ -39,7 +39,7 @@ const Carousel = ({ images }) => {
 
 
   return (
-    <div data-aos="fade-up" id="default-carousel" className="relative w-full" style={{ height: carouselHeight }}>
+    <div data-aos="fade-up" data-aos-duration="1500"  id="default-carousel" className="relative w-full" style={{ height: carouselHeight }}>
       <div className="absolute top-4 right-4 ml-6 z-50">
         <img data-aos="fade-up" data-aos-duration="2000" src={logo} alt="logo" className="rounded-full w-16 h-16" />
       </div>
@@ -112,7 +112,7 @@ const Carousel = ({ images }) => {
 
       {/* Botón de WhatsApp */}
       <a
-       data-aos="fade-up" data-aos-duration="2000" 
+       
         href="https://wa.me/56984146344"
         target="_blank"
         rel="noopener noreferrer"
