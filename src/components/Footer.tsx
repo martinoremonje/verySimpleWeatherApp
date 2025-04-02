@@ -8,10 +8,10 @@ const Footer = () => {
         <div  className="text-center md:text-left mb-4 md:mb-0">
           
           <hr />
-          <p>Contacto: +56 984146344</p>
-          <p>Email: vigesta@vigesta.cl</p>
-          <p>Asesorías Ambientales en todo el territorio nacional</p>
           <p>&copy; {new Date().getFullYear()} Vigesta. Todos los derechos reservados.</p>
+          <p>vigesta@vigesta.cl</p>
+          <p>Asesorías Ambientales en todo el territorio nacional</p>
+          
           <hr />
         </div>
         
