@@ -1,12 +1,8 @@
-{ "rewrites": [
-  {
-    "source": "/:path*",
-    "destination": "/"
-  }
-],
-    "build": {
-      "env": {
-        "TSC_COMPILE_ON_ERROR": "true" 
-      }
+{
+  "rewrites": [
+    {
+      "source": "/:path*",
+      "destination": "/"
     }
+  ]
 }
