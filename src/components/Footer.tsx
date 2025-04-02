@@ -1,4 +1,4 @@
-import { FaTwitter, FaInstagram, FaFacebook } from 'react-icons/fa';
+import { FaLinkedin, FaInstagram, FaFacebook } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -14,7 +14,7 @@ const Footer = () => {
         
         <div className="flex justify-center space-x-4 ">
           <a href="#" className="hover:text-gray-300">
-            <FaTwitter size={24} />
+            <FaLinkedin size={24} />
           </a>
           <a href="#" className="hover:text-gray-300">
             <FaInstagram size={24} />
