@@ -1,5 +1,7 @@
 import React from 'react';
 import logo from '../assets/vigestaLogo.ico';
+import { Link } from 'react-router-dom'; // Importa Link
+
 
 const CombinedPage = () => {
   return (
@@ -15,7 +17,10 @@ const CombinedPage = () => {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
             <div className="flex-shrink-0">
+              <Link to="/">
+              
             <img src={logo} alt="Ir a la página de inicio" className="w-full h-full object-cover"/>
+              </Link>
             </div>
             <div className="hidden sm:block">
               <div className="flex space-x-4">
