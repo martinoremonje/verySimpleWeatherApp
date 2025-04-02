@@ -36,8 +36,7 @@ const Carousel = ({ images }) => {
   // Calcular la altura del carrusel
   const carouselHeight = `calc(100vh - 7rem)`; // 7rem es equivalente a h-28 (4 * 7 = 28 / 4 = 7 rem)
 
-  // Enlace de WhatsApp
-  const whatsappLink = 'https://wa.me/56944011200';
+
 
   return (
     <div data-aos="fade-up" id="default-carousel" className="relative w-full" style={{ height: carouselHeight }}>
@@ -113,6 +112,7 @@ const Carousel = ({ images }) => {
 
       {/* Botón de WhatsApp */}
       <a
+       data-aos="fade-up" data-aos-duration="2000" 
         href="https://wa.me/56944011200"
         target="_blank"
         rel="noopener noreferrer"

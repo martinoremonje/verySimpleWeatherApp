@@ -2,6 +2,8 @@ import React from 'react';
 import logo from '../assets/vigestaLogo.ico';
 import { Link } from 'react-router-dom'; // Importa Link
 
+import { FaWhatsapp } from 'react-icons/fa'; // Importa el icono de WhatsApp
+
 
 const CombinedPage = () => {
   return (
@@ -63,6 +65,7 @@ const CombinedPage = () => {
                 <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Enviar Mensaje</button>
               </form>
             </div>
+            
           </section>
 
           {/* Sección de Acerca de Nosotros */}
@@ -101,6 +104,7 @@ const CombinedPage = () => {
               {/* Agrega más referencias aquí */}
             </div>
           </section>
+          
         </div>
       </main>
     </div>
