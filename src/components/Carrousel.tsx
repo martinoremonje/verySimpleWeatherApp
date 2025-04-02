@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import logo from '../assets/vigestaLogo.png';
+import { Link } from 'react-router-dom'; // Importa Link
 
 const Carousel = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -35,7 +36,7 @@ const Carousel = ({ images }) => {
   const carouselHeight = `calc(100vh - 7rem)`; // 7rem es equivalente a h-28 (4 * 7 = 28 / 4 = 7 rem)
 
   return (
-    <div id="default-carousel" className="relative w-full" style={{ height: carouselHeight }}>
+    <div data-aos="fade-up" id="default-carousel" className="relative w-full" style={{ height: carouselHeight }}>
       <div className="absolute top-4 right-4 ml-6 z-50">
         <img data-aos="fade-up" data-aos-duration="2000" src={logo} alt="logo" className="rounded-full w-16 h-16" />
       </div>
@@ -61,15 +62,15 @@ const Carousel = ({ images }) => {
           style={{ pointerEvents: isDropdownOpen ? 'auto' : 'none' }}
         >
           <div className="flex flex-col items-end">
-            <a href="/contacto" className="block px-4 py-2 text-sm text-white hover:bg-gray-800/20 hover:text-gray-600">
+            <Link to="/contacto#contacto" className="block px-4 py-2 text-sm text-white hover:bg-gray-800/20 hover:text-gray-600">
               Contacto
-            </a>
-            <a href="/about-us" className="block px-4 py-2 text-sm text-white hover:bg-gray-800/20 hover:text-gray-600">
+            </Link>
+            <Link to="/contacto#about-us" className="block px-4 py-2 text-sm text-white hover:bg-gray-800/20 hover:text-gray-600">
               About Us
-            </a>
-            <a href="/referencias" className="block px-4 py-2 text-sm text-white hover:bg-gray-800/20 hover:text-gray-600">
+            </Link>
+            <Link to="/contacto#referencias" className="block px-4 py-2 text-sm text-white hover:bg-gray-800/20 hover:text-gray-600">
               Referencias
-            </a>
+            </Link>
           </div>
         </div>
       </div>
