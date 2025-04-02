@@ -6,10 +6,13 @@ const Footer = () => {
       <div className="container mx-auto flex flex-col md:flex-row md:justify-between md:items-center">
         
         <div  className="text-center md:text-left mb-4 md:mb-0">
-          <p>&copy; {new Date().getFullYear()} Vigesta. Todos los derechos reservados.</p>
+          
           <hr />
           <p>Contacto: +56 984146344</p>
           <p>Email: vigesta@vigesta.cl</p>
+          <p>Asesorías Ambientales en todo el territorio nacional</p>
+          <p>&copy; {new Date().getFullYear()} Vigesta. Todos los derechos reservados.</p>
+          <hr />
         </div>
         
         <div className="flex justify-center space-x-4 ">
