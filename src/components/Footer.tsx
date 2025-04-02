@@ -25,7 +25,9 @@ const Footer = () => {
           <a href="#" className="hover:text-gray-300">
             <FaFacebook size={24} />
           </a>
+          <p className='text-gray-800'>powered by programartin</p>
         </div>
+       
         <hr />
       </div>
     </footer>
