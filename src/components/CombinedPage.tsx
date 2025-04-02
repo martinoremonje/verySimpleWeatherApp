@@ -39,34 +39,7 @@ const CombinedPage = () => {
       <main className="py-8">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* Sección de Contacto */}
-          <section id="contacto" className="py-6 flex justify-end">
-            <div className="w-full md:w-1/2 lg:w-1/2 text-left"> {/* Contenedor a la derecha, texto a la izquierda */}
-              <h2 className="text-2xl font-bold mb-4">Contacto</h2>
-              <p className="mb-4">¡Estamos aquí para ayudarte! Contáctanos a través de los siguientes medios:</p>
-              <ul className="list-disc pl-6 mb-4">
-                <li>Email: info@tuempresa.com</li>
-                <li>Teléfono: +56 9 1234 5678</li>
-                <li>Dirección: Calle Falsa 123, Quillota, Chile</li>
-              </ul>
-              <p>O puedes completar el siguiente formulario:</p>
-              <form className="max-w-lg">
-                <div className="mb-4">
-                  <label htmlFor="nombre" className="block text-gray-700 text-sm font-bold mb-2">Nombre:</label>
-                  <input type="text" id="nombre" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
-                </div>
-                <div className="mb-4">
-                  <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">Email:</label>
-                  <input type="email" id="email" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
-                </div>
-                <div className="mb-4">
-                  <label htmlFor="mensaje" className="block text-gray-700 text-sm font-bold mb-2">Mensaje:</label>
-                  
-                </div>
-                <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Enviar Mensaje</button>
-              </form>
-            </div>
-            
-          </section>
+          
 
           {/* Sección de Acerca de Nosotros */}
           <section id="about-us" className="py-6 flex justify-end">
@@ -104,7 +77,42 @@ const CombinedPage = () => {
               {/* Agrega más referencias aquí */}
             </div>
           </section>
-          
+          <section id="contacto" className="py-6 flex justify-end">
+            <div className="w-full md:w-1/2 lg:w-1/2 text-left"> {/* Contenedor a la derecha, texto a la izquierda */}
+              <h2 className="text-2xl font-bold mb-4">Contacto</h2>
+              <p className="mb-4">¡Estamos aquí para ayudarte! Contáctanos a través de los siguientes medios:</p>
+              <ul className="list-disc pl-6 mb-4">
+                <li>Email: info@tuempresa.com</li>
+                <li>Teléfono: +56 9 1234 5678</li>
+                <li>Dirección: Calle Falsa 123, Quillota, Chile</li>
+              </ul>
+              <p>O puedes completar el siguiente formulario:</p>
+              <form className="max-w-lg">
+                <div className="mb-4">
+                  <label htmlFor="nombre" className="block text-gray-700 text-sm font-bold mb-2">Nombre:</label>
+                  <input type="text" id="nombre" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
+                </div>
+                <div className="mb-4">
+                  <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">Email:</label>
+                  <input type="email" id="email" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
+                </div>
+                <div className="mb-4">
+                  <label htmlFor="mensaje" className="block text-gray-700 text-sm font-bold mb-2">Mensaje:</label>
+                  
+                </div>
+                <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Enviar Mensaje</button>
+              </form>
+            </div>
+            <a
+       
+        href="https://wa.me/56984146344"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-700 text-white rounded-full w-14 h-14 flex items-center justify-center z-50 shadow-lg"
+      >
+        <FaWhatsapp className="w-8 h-8" />
+      </a>
+          </section>
         </div>
       </main>
     </div>
