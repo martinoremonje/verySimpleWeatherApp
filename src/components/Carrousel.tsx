@@ -38,8 +38,8 @@ const Carousel = ({ images }) => {
 
   return (
     <div data-aos="fade-up" data-aos-duration="1500"  id="default-carousel" className="relative w-full" style={{ height: carouselHeight }}>
-      <div className="absolute top-4 right-4 ml-6 z-50">
-        <img data-aos="fade-up" data-aos-duration="2000" src={logo} alt="logo" className="rounded-full w-16 h-16" />
+      <div  className="absolute top-4 right-4 ml-6 z-50 rounded bg-gray-100">
+        <img data-aos="fade-up" data-aos-duration="2000" src={logo} alt="logo" className=" rounded-full w-16 h-16" />
       </div>
       <div className="absolute top-4 right-0 mr-2 z-50" ref={dropdownRef}>
         <button
