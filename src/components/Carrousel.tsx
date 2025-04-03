@@ -38,16 +38,19 @@ const Carousel = ({ images }) => {
 
   return (
     <div data-aos="fade-up" data-aos-duration="1500"  id="default-carousel" className="relative w-full" style={{ height: carouselHeight }}>
-      <div  className="absolute top-4 right-4 ml-6 z-50 rounded bg-gray-100 whatsapp-grow-on-hover">
+      
+      
+      <div  className=" absolute top-4 right-4 ml-6 z-50 rounded bg-gray-100 whatsapp-grow-on-hover">
         <img data-aos="fade-up" data-aos-duration="2000" src={logo} alt="logo" className=" rounded-full w-16 h-16" />
+    
       </div>
       <div className="absolute top-4 right-0 mr-2 z-50" ref={dropdownRef}>
         <button
           onClick={toggleDropdown}
-          className="inline-flex items-center rounded-md py-2 px-4 text-white"
+          className="inline-flex items-center rounded-md py-2 px-4 text-white cursor-pointer"
         >
           <svg
-            className={`w-4 h-4 ml-2 transform ${isDropdownOpen ? 'rotate-180' : ''}`}
+            className={`w-4 h-4 transform ${isDropdownOpen ? 'rotate-180' : ''}`}
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -57,12 +60,12 @@ const Carousel = ({ images }) => {
           </svg>
         </button>
         <div
-          className={`absolute right-0 mt-[2px] w-48 rounded-md shadow-lg py-1 transition-all duration-300 ease-in-out ${
+          className={`absolute right-0 mt-[2px] w-44 rounded-md shadow-lg py-1 transition-all duration-300 ease-in-out ${
             isDropdownOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
           }`}
           style={{ pointerEvents: isDropdownOpen ? 'auto' : 'none' }}
         >
-          <div className="flex flex-col items-end">
+          <div className="flex flex-col items-center">
             <Link to="/contacto#contacto" className="block px-4 py-2 text-sm text-white hover:bg-gray-800/20 hover:text-gray-600">
               Más Información
             </Link>

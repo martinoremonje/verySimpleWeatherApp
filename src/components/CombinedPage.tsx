@@ -114,7 +114,7 @@ const CombinedPage = () => {
         href="https://wa.me/56984146344"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-700 text-white rounded-full w-14 h-14 flex items-center justify-center z-50 shadow-lg"
+        className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-700 text-white rounded-full w-14 h-14 flex items-center justify-center z-50 shadow-lg whatsapp-grow-on-hover"
       >
         <FaWhatsapp className="w-8 h-8" />
       </a>
