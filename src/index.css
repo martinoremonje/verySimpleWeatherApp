@@ -4,6 +4,9 @@
 @tailwind utilities;
 
 
+body{
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
 
   #root{/*en caso de usar react*/
    overflow-x: hidden;

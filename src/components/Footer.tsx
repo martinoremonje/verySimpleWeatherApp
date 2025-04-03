@@ -5,13 +5,13 @@ const Footer = () => {
     <footer className="bg-gray-800 text-white p-4 min-h-28">
       <div className="container mx-auto flex flex-col md:flex-row md:justify-between md:items-center">
         
-        <div  className="text-center md:text-left mb-4 md:mb-0">
+        <div  className="text-center md:text-left mb-4 md:mb-0 ">
           
           <hr />
-          <p>&copy; {new Date().getFullYear()} Vigesta. Todos los derechos reservados.</p>
+          <p>Asesorías Ambientales en todo el territorio nacional.</p>
           <p>vigesta@vigesta.cl</p>
-          <p>Asesorías Ambientales en todo el territorio nacional</p>
-          
+       
+          <p>&copy; {new Date().getFullYear()} Vigesta. Todos los derechos reservados.</p>
           <hr />
         </div>
         
@@ -25,7 +25,6 @@ const Footer = () => {
           <a href="#" className="hover:text-gray-300">
             <FaFacebook size={24} />
           </a>
-          <p className='text-gray-800'>powered by programartin</p>
         </div>
        
         <hr />
